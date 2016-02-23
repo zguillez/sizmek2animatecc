@@ -240,7 +240,7 @@ module.exports = function (grunt) {
 		grunt.config.set('replace.json.replacements.0.from', '"images": ["images/' + filename + '_atlas_.png"]');
 		grunt.config.set('replace.json.replacements.0.to', '"images": ["images/' + filename + '.png"]');
 		grunt.config.set('replace.video.src', folder + '/banner_' + filename + '/' + filename + '.html');
-		grunt.config.set('replace.video.replacements.3.to', '\t#banner {position: relative; display:inline-block;}\n\t.video-container {position: absolute; top: ' + pos[1] + 'px; left:' + pos[0] + 'px;}\n</style>\n\n');
+		grunt.config.set('replace.video.replacements.3.to', '\t#banner {position: relative; display:inline-block;}\n\t.video-container {position: absolute; top: ' + pos[1] + 'px; left:' + pos[0] + 'px; width: ' + pos[2] + 'px; height:' + pos[3] + 'px;}\n</style>\n\n');
 		grunt.config.set('imagemin.compress.files.0.cwd', folder + '/banner_' + filename + '/');
 		grunt.config.set('imagemin.compress.files.0.dest', folder + '/banner_' + filename + '/');
 		grunt.config.set('pngmin.compress.files.0.cwd', folder + '/banner_' + filename + '/');

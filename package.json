@@ -1,6 +1,6 @@
 {
   "name": "sizmek2animatecc",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Npm module that execute Grunt task to implement Sizmek clicktag code into HTML banner made with Adobe Animate CC",
   "repository": "https://github.com/zguillez/sizmek2animatecc",
   "license": "MIT",
