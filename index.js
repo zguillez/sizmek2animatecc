@@ -1,0 +1,1 @@
+//fs.createReadStream(dir + '/Gruntfile.js').pipe(fs.createWriteStream('Gruntfile.js'));
