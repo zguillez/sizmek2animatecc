@@ -144,7 +144,7 @@ module.exports = function (grunt) {
 					to: '</title>\n\n<script>EBModulesToLoad = ["Video", "EBCMD"];</script>\n'
 				}, {
 					from: '</style>\n\n',
-					to: '\t#banner {position: relative; display:inline-block;}\n\t.video-container {position: absolute; top: YYYpx; left: XXXpx;}\n</style>\n\n'
+					to: '\t#banner {position:relative; display:inline-block;}\n\t.video-container {}\n\tvideo {}\n</style>\n\n'
 				}, {
 					from: '\n</script>',
 					to: '\n\nvar adDiv;\nvar videoContainer;\nvar video;\nvar sdkVideoPlayer;\nvar sdkVideoPlayButton;\nvar isIOS = (/iPhone|iPad|iPod/i).test(navigator.userAgent);\n\nfunction initVideo() {\n\tadDiv = document.getElementById("ad");\n\tvideoContainer = document.getElementById("video-container");\n\tvideo = document.getElementById("video");\n\tsdkVideoPlayer = document.getElementById("sdk-video-player");\n\tsdkVideoPlayButton = document.getElementById("sdk-video-play-button");\n\tvar sdkData = EB.getSDKData();\n\tvar useSDKVideoPlayer = false;\n\tvar sdkPlayerVideoFormat = "mp4";\n\tif (sdkData !== null) {\n\t\tif (sdkData.SDKType === "MRAID" && sdkData.version > 1) {\n\t\t\tdocument.body.classList.add("sdk");\n\t\t\tEB.setExpandProperties({\n\t\t\t\tuseCustomClose: true\n\t\t\t});\n\t\t\tvar sourceTags = video.getElementsByTagName("source");\n\t\t\tvar videoSource = "";\n\t\t\tfor (var i = 0; i < sourceTags.length; i++) {\n\t\t\t\tif (sourceTags[i].getAttribute("type")) {\n\t\t\t\t\tif (sourceTags[i].getAttribute("type").toLowerCase() === "video/" + sdkPlayerVideoFormat) {\n\t\t\t\t\t\tvideoSource = sourceTags[i].getAttribute("src");\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\tvideoContainer.removeChild(video);\n\t\t\tvideo = null;\n\t\t\tsdkVideoPlayButton.addEventListener("click", function() {\n\t\t\t\tif (videoSource !== "") {\n\t\t\t\t\tEB.playVideoOnNativePlayer(videoSource);\n\t\t\t\t}\n\t\t\t});\n\t\t\tuseSDKVideoPlayer = true;\n\t\t}\n\t}\n\tif (!useSDKVideoPlayer) {\n\t\tvideoContainer.removeChild(sdkVideoPlayer);\n\t\tvar videoTrackingModule = new EBG.VideoModule(video);\n\t}\n\tvideoContainer.style.visibility = "visible";\n\tif (isIOS) {\n\t\tcenterWebkitVideoControls();\n\t}\n}\n\nfunction centerWebkitVideoControls() {\n\tdocument.body.classList.add("ios-center-video-controls");\n}\n</script>'
@@ -240,7 +240,7 @@ module.exports = function (grunt) {
 		grunt.config.set('replace.json.replacements.0.from', '"images": ["images/' + filename + '_atlas_.png"]');
 		grunt.config.set('replace.json.replacements.0.to', '"images": ["images/' + filename + '.png"]');
 		grunt.config.set('replace.video.src', folder + '/banner_' + filename + '/' + filename + '.html');
-		grunt.config.set('replace.video.replacements.3.to', '\t#banner {position: relative; display:inline-block;}\n\t.video-container {position: absolute; top: ' + pos[1] + 'px; left:' + pos[0] + 'px; width: ' + pos[2] + 'px; height:' + pos[3] + 'px;}\n</style>\n\n');
+		grunt.config.set('replace.video.replacements.3.to', '\t#banner {position: relative; display:inline-block;}\n\t.video-container {position:absolute; top:' + pos[1] + 'px; left:' + pos[0] + 'px; width:' + pos[2] + 'px; height:' + pos[3] + 'px;}\n\tvideo {width:100%; height:100%;}\n</style>\n\n');
 		grunt.config.set('imagemin.compress.files.0.cwd', folder + '/banner_' + filename + '/');
 		grunt.config.set('imagemin.compress.files.0.dest', folder + '/banner_' + filename + '/');
 		grunt.config.set('pngmin.compress.files.0.cwd', folder + '/banner_' + filename + '/');
