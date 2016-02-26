@@ -1,7 +1,7 @@
 # sizmek2animatecc
 
 [![npm version](https://badge.fury.io/js/sizmek2animatecc.svg)](https://badge.fury.io/js/sizmek2animatecc)
-[![Build Status](http://img.shields.io/travis/zguillez/sizmek2animatecc.svg)](https://github.com/zguillez/sizmek2animatecc)
+[![Build Status](http://img.shields.io/travis/zguillez/sizmek2animatecc.svg)](https://travis-ci.org/zguillez/sizmek2animatecc)
 [![Code Climate](http://img.shields.io/codeclimate/github/zguillez/sizmek2animatecc.svg)](https://codeclimate.com/github/zguillez/sizmek2animatecc)
 [![Dependency Status](https://gemnasium.com/zguillez/sizmek2animatecc.svg)](https://gemnasium.com/zguillez/sizmek2animatecc)
 [![Installs](https://img.shields.io/npm/dt/sizmek2animatecc.svg)](https://coveralls.io/r/zguillez/sizmek2animatecc)
