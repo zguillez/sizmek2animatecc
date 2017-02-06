@@ -1,5 +1,7 @@
 # sizmek2animatecc
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zguillez/sizmek2animatecc.svg)](https://greenkeeper.io/)
+
 [![npm version](https://badge.fury.io/js/sizmek2animatecc.svg)](https://badge.fury.io/js/sizmek2animatecc)
 [![Build Status](http://img.shields.io/travis/zguillez/sizmek2animatecc.svg)](https://travis-ci.org/zguillez/sizmek2animatecc)
 [![Code Climate](http://img.shields.io/codeclimate/github/zguillez/sizmek2animatecc.svg)](https://codeclimate.com/github/zguillez/sizmek2animatecc)
